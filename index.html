@@ -3,7 +3,7 @@
 <html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=1024, user-scalable=no">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 
   <title>CSS methodologies and frameworks</title>
 
@@ -39,7 +39,7 @@
     <!-- slide 1 -->
     <section class="slide deck-current" id="slide-0" aria-hidden="false">
       <div class="slide-wrapper">
-        <div class="title text-center">
+        <div class="title">
           <p>- Front-end training -</p>
           <h1>CSS methodologies and frameworks</h1>
         </div>
@@ -53,7 +53,7 @@
           You don’t write clean markup for the browser, you don’t write it for the end users. 
           You write it for the person who takes over the job from you. Much like you should use good grammar.
         </p>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/others-code.gif" alt="others-code">
+        <img class="medium-img" src="./CSS methodologies and frameworks_files/others-code.gif" alt="others-code">
         <p>
           Unstructured CSS in a large project often became a mess. Minor changes fix one problem 
           but create three more and can require ugly hacks, and small CSS changes can break JavaScript functionality.
@@ -97,14 +97,14 @@
         <p>The separation of technologies is an incredibly good idea but it was not always implemented in real life products.</p>
         <div class="row">
           <div class="half-with-container">
-            <img src="./CSS methodologies and frameworks_files/the-separation-of-concerns-old.png" alt="">
+            <img class="default-img" src="./CSS methodologies and frameworks_files/the-separation-of-concerns-old.png" alt="">
             <p>
               The separation of technologies: HTML is the structure, CSS is for the visual look and feel and JavaScript is for behaviour.
             </p>
           </div>
 
           <div class="half-with-container">
-            <img src="./CSS methodologies and frameworks_files/the-separation-of-concerns-new.png" alt="">
+            <img class="default-img" src="./CSS methodologies and frameworks_files/the-separation-of-concerns-new.png" alt="">
             <p>
               Think of the "separation of concerns" and not layers of development.
             </p>
@@ -137,7 +137,7 @@
   }
 &lt;/style&gt;
             </pre>
-            <img src="./CSS methodologies and frameworks_files/drake-no.png" alt="Drake no!">
+            <img class="small-img" src="./CSS methodologies and frameworks_files/drake-no.png" alt="Drake no!">
           </div>
           <div class="half-width-container code-example">
             <pre>&lt;p <span class="green-text">class</span>=<span class="red-text">"greeting"</span>&gt;Hello there!&lt;/p&gt;
@@ -148,7 +148,7 @@
 }
 &lt;/style&gt;
             </pre>
-            <img src="./CSS methodologies and frameworks_files/drake-yes.png" alt="Drake yes!">
+            <img class="small-img" src="./CSS methodologies and frameworks_files/drake-yes.png" alt="Drake yes!">
           </div>
         </div>
 
@@ -548,7 +548,7 @@
           Molecules, Organisms, Templates, Pages. Atomic elements combine together to form molecules which can combine 
           further to form relatively complex organisms.
         </p>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/atomic-design-process.png" alt="">
+        <img class="big-img" src="./CSS methodologies and frameworks_files/atomic-design-process.png" alt="">
         <a class="text-center" href="http://atomicdesign.bradfrost.com/">http://atomicdesign.bradfrost.com/</a>
       </div>
     </section>
@@ -560,7 +560,7 @@
           When a company builds a design system, they have a goal they’re trying to achieve: improving 
           brand consistency, preventing duplicate work across teams, or increasing code quality.
         </p>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/styleguides.png" alt="">
+        <img class="big-img" src="./CSS methodologies and frameworks_files/styleguides.png" alt="">
 
         <a class="text-center" href="http://styleguides.io/">http://styleguides.io</a>
       </div>
@@ -574,7 +574,7 @@
           and for the third-party applications on platforms like Chrome Add-ons and Android Apps. Using of Material 
           Design is the easiest way for a developer to setup a good-looking Android interface.
         </p>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/material-design.png" alt="">
+        <img class="big-img" src="./CSS methodologies and frameworks_files/material-design.png" alt="">
 
         <a class="text-center" href="https://material.io/guidelines/">https://material.io/guidelines/</a>
       </div>
@@ -588,7 +588,7 @@
           <br>
           Just download the CSS stylesheet and add the appropriate classes to your markup.
         </p>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/grid.png" alt="bootstrap grid">
+        <img class="big-img" src="./CSS methodologies and frameworks_files/grid.png" alt="bootstrap grid">
         <div class="links text-center">
           <a href="http://simplegrid.io/">http://simplegrid.io/</a>
           <a href="https://960.gs/">https://960.gs/</a>
@@ -602,7 +602,7 @@
         <p>
           The most popular front-end framework for developing responsive, mobile first projects on the web.
         </p>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/bootstrap_view.jpg" alt="">
+        <img class="big-img" src="./CSS methodologies and frameworks_files/bootstrap_view.jpg" alt="">
         <a class="text-center" href="http://getbootstrap.com/">http://getbootstrap.com/</a>
       </div>
     </section>
@@ -649,7 +649,7 @@
   grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
 }
       </pre>
-      <img class="default-img" src="./CSS methodologies and frameworks_files/grid_naming.png" alt="grid naming">
+      <img class="big-img" src="./CSS methodologies and frameworks_files/grid_naming.png" alt="grid naming">
       </div>
     </section>
     <!-- slide 26-->
@@ -663,7 +663,7 @@
   grid-row-end: 3;
 }
         </pre>
-        <img class="default-img" src="./CSS methodologies and frameworks_files/grid-item-position.png" alt="grid item position">
+        <img class="big-img" src="./CSS methodologies and frameworks_files/grid-item-position.png" alt="grid item position">
       </div>
     </section>
     <!-- slide 27 -->

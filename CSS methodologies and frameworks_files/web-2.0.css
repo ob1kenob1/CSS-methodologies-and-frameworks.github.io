@@ -517,18 +517,22 @@ a {
 
 .code-example {
   font-size: 18px;
-  overflow-y: auto !important;
 }
 
 .default-img {
-  height: 450px;
+  height: 30vh;
+  margin: 15px auto;
+}
+
+.medium-img {
+  height: 45vh;
   margin: 15px auto;
 }
 
 .big-img {
-  width: 60vw;
-  height: 65vh;
-  margin: 15px auto;
+  width: 45vw;
+  height: 55vh;
+  margin: 10px auto;
 }
 
 .half-with-container {
@@ -562,10 +566,8 @@ a {
 }
 
 .title {
-  margin: auto;
-  margin-top: 25%;
   text-align: center;
-  /* max-width: 50vw; */
+  margin-top: calc(50vh - 100px);
 }
 
 .title > p {
@@ -578,9 +580,22 @@ a {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
+  p {
+    font-size: 16px;
+  }
+
   .slide-wrapper {
     width: 90vw;
   }
+
+  .code-example {
+    font-size: 12px;
+  }
+
+  .small-img {
+    height: 25vh;
+  }
+
 }
 
