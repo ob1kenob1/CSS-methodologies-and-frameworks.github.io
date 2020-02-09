@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<!-- saved from url=(0160)file:///home/ob1wn/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F/deks/css_methodologies/CSS_methodologies_and_frameworks.html#slide-0 -->
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>CSS methodologies and frameworks</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/deck.status.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="./CSS methodologies and frameworks_files/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="./CSS methodologies and frameworks_files/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="./CSS methodologies and frameworks_files/modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+    <div class="header">
+      <img class="header-logo" src="./CSS methodologies and frameworks_files/Logo.png" alt="EPAM logo">
+      <div class="header-text">CSS METHODOLOGIES AND FRAMEWORKS</div>
+    </div>
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    <!-- slide 1 -->
+    <section class="slide deck-current" id="slide-0" aria-hidden="false">
+      <div class="slide-wrapper">
+        <div class="title text-center">
+          <p>- Front-end training -</p>
+          <h1>CSS methodologies and frameworks</h1>
+        </div>
+      </div>
+    </section>
+    <!-- slide 2 -->
+    <section class="slide deck-next" id="slide-1" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Maintainable code</h2>
+        <p>
+          You don’t write clean markup for the browser, you don’t write it for the end users. 
+          You write it for the person who takes over the job from you. Much like you should use good grammar.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/others-code.gif" alt="others-code">
+        <p>
+          Unstructured CSS in a large project often became a mess. Minor changes fix one problem 
+          but create three more and can require ugly hacks, and small CSS changes can break JavaScript functionality.
+        </p>
+      </div>
+    </section>
+    <!-- slide 3 -->
+    <section class="slide deck-after" id="slide-2" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Benefits of a smart scalable CSS Architecture</h2>
+        <ul>
+          <li>Fewer styling rules</li>
+          <li>Fewer styling collisions</li>
+          <li>Long-term maintainability</li>
+          <li>Faster ramp-up for new team members</li>
+          <li>Easier collaboration between team members</li>
+          <li>Smoother project handoffs</li>
+        </ul>
+      </div>
+    </section>
+    <!-- slide 4 -->
+    <section class="slide deck-after" id="slide-3" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>How to manage css on complex websites?</h2>
+        <p>Example 1: a large set of UI elements repeatable on a different pages.</p>
+        <img class="big-img" src="./CSS methodologies and frameworks_files/complex-ui-1.png" alt="complex-ui-1">
+      </div>
+    </section>
+    <!-- slide 5 -->
+    <section class="slide deck-after" id="slide-4" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Is it possible to write a maintainable CSS?</h2>
+        <p>Example 2: an admin panel with a lot of components that shares same controls inside.</p>
+        <img class="big-img" src="./CSS methodologies and frameworks_files/complex-ui-2.png" alt="complex-ui-2">
+      </div>
+    </section>
+    <!-- slide 6 -->
+    <section class="slide deck-after" id="slide-5" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>The separation of concerns</h2>
+        <p>The separation of technologies is an incredibly good idea but it was not always implemented in real life products.</p>
+        <div class="row">
+          <div class="half-with-container">
+            <img src="./CSS methodologies and frameworks_files/the-separation-of-concerns-old.png" alt="">
+            <p>
+              The separation of technologies: HTML is the structure, CSS is for the visual look and feel and JavaScript is for behaviour.
+            </p>
+          </div>
+
+          <div class="half-with-container">
+            <img src="./CSS methodologies and frameworks_files/the-separation-of-concerns-new.png" alt="">
+            <p>
+              Think of the "separation of concerns" and not layers of development.
+            </p>
+          </div>
+        </div>
+        <p>
+          After each new web technology is introduced the separation becomes much harder. What good is a CANVAS without any scripting?
+          Should we animate in CSS or in JavaScript? Is animation behaviour or presentation? Should elements needed solely for visual
+          effects be in the HTML or generated with JavaScript or with :after and :before in CSS?
+        </p>
+
+      </div>
+    </section>
+    <!-- slide 7 -->
+    <section class="slide deck-after" id="slide-6" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Separation of concerns</h2>
+        <p>
+          The idea if "separation of concerns" is that your HTML should only contain information about your content, and all of your 
+          styling decisions should be made in your CSS. This idea is reflected on a well known <a href="file:///home/ob1wn/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F/deks/css_methodologies/csszengarden.com">csszengarden.com</a> site 
+          (you can completely redesign a site just by swapping out the stylesheet.)
+        </p>
+        <div class="row">
+          <div class="half-width-container code-example">
+            <pre>&lt;p <span class="green-text">class</span>=<span class="red-text">"text-center"</span>&gt;Hello there!&lt;/p&gt;
+ 
+&lt;style&gt;
+  .text-center {
+    text-align: center;
+  }
+&lt;/style&gt;
+            </pre>
+            <img src="./CSS methodologies and frameworks_files/drake-no.png" alt="Drake no!">
+          </div>
+          <div class="half-width-container code-example">
+            <pre>&lt;p <span class="green-text">class</span>=<span class="red-text">"greeting"</span>&gt;Hello there!&lt;/p&gt;
+
+&lt;style&gt;
+  .greeting {
+    text-align: center;
+}
+&lt;/style&gt;
+            </pre>
+            <img src="./CSS methodologies and frameworks_files/drake-yes.png" alt="Drake yes!">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- slide 8 -->
+    <section class="slide deck-after" id="slide-7" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Concerns are not so separated</h2>
+        <p>
+          Most of the time the CSS is like a mirror for the markup, perfectly reflecting my HTML structure with nested CSS selectors. 
+          The markup isn't concerned with styling decisions, but CSS is very concerned with the markup structure.
+        </p>
+        <div class="row">
+          <div class="half-width-container code-example">
+            <pre>&lt;div <span class="green-text">class</span>=<span class="red-text">"company-info"</span>&gt;
+  &lt;img <span class="green-text">src</span>=<span class="red-text">"https://some.link"</span> alt=""&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Epam&lt;/h2&gt;
+    &lt;p&gt;
+      We specialize in 11 industries
+      in 25 countries, delivering
+      innovative solutions
+      to our customers’
+      most challenging problems.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <div class="half-width-container code-example">
+            <pre>.company-info {
+  background-color: #999;
+  border: 1px solid #76cdd8;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px #ccc;
+
+  &amp; &gt; img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &amp; &gt; div {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: rgba(0,0,0,0.75);
+    }
+  }
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slide 9 -->
+    <section class="slide deck-after" id="slide-8" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Decoupling styles from structure</h2>
+        <p>Keeping selector specificity low and making your CSS less dependent on your particular DOM structure.</p>
+        <div class="row">
+          <div class="half-width-container code-example">
+            <pre>&lt;div <span class="green-text">class</span>=<span class="red-text">"company-info"</span>"company-info"&gt;
+  &lt;img <span class="green-text">class</span>=<span class="red-text">"company-info-image"</span> <span class="green-text">src=</span><span class="red-text">"https://some.img"</span>&gt;
+  &lt;div <span class="green-text">class</span>=<span class="red-text">"company-info-content"</span>&gt;
+    &lt;h2 <span class="green-text">class</span>=<span class="red-text">"company-info-name"</span>&gt;Epam&lt;/h2&gt;
+    &lt;p <span class="green-text">class</span>=<span class="red-text">"company-info-body"</span>&gt;
+      We specialize in 11 industries
+      in 25 countries, delivering
+      innovative solutions
+      to our customers’
+      most challenging problems.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <div class="half-width-container code-example">
+            <pre>.company-info {
+  background-color: #999;
+  border: 1px solid #76cdd8;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px #ccc;
+}
+
+.company-info-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.company-info-content {
+  padding: 1rem;
+}
+
+.company-info-name {
+  font-size: 1.25rem;
+}
+
+.company-info-body {
+  color: rgba(0,0,0,0.75);
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slide 10 -->
+    <section class="slide deck-after" id="slide-9" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Dealing with similar components</h2>
+        <p>
+          Say we needed to add a new block a preview of an article in a card layout. And it should look exactly 
+          like an company-info block with a rounded corners, box-shadow, etc.
+        </p>
+        <div class="row">
+          <div class="half-width-container code-example">
+            <pre>&lt;div <span class="green-text">class</span>=<span class="red-text">"company-info"</span>&gt;
+  &lt;img <span class="green-text">class</span>=<span class="red-text">"company-info-image"</span> <span class="green-text">src</span>="..."&gt;
+  &lt;div <span class="green-text">class</span>=<span class="red-text">"company-info-content"</span>&gt;
+    &lt;h2 <span class="green-text">class</span>=<span class="red-text">"company-info-name"</span>&gt;Epam&lt;/h2&gt;
+    &lt;p <span class="green-text">class</span>=<span class="red-text">"company-info-body"</span>&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <div class="half-width-container code-example">
+            <pre>&lt;div <span class="green-text">class</span>=<span class="red-text">"article-preview"</span>&gt;
+  &lt;img <span class="green-text">class</span>=<span class="red-text">"article-preview-image"</span> <span class="green-text">src</span>="..."&gt;
+  &lt;div <span class="green-text">class</span>=<span class="red-text">"article-preview-content"</span>&gt;
+    &lt;h2 <span class="green-text">class</span>=<span class="red-text">"article-preview-name"</span>&gt;Breaking news!&lt;/h2&gt;
+    &lt;p <span class="green-text">class</span>=<span class="red-text">"article-preview-body"</span>&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slide 11 -->
+    <section class="slide deck-after" id="slide-10" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Dealing with similar components</h2>
+        <p>Option 1. Duplicate styles. But it will break the DRY principle</p>
+        <pre class="code-example">.company-info {...}
+.company-info-image {...}
+.company-info-content {...}
+.company-info-name {...}
+.company-info-body {...}
+
+.article-preview {...}
+.article-preview-image {...}
+.article-preview-content {...}
+.article-preview-name {...}
+.article-preview-body {...}
+        </pre>
+        <p>Option 2. Use SCSS @extend construction. Which is better not to use at all</p>
+        <pre class="code-example">.article-preview {
+  <strong>@extend</strong> .author-bio;
+}
+...
+        </pre>
+      </div>
+    </section>
+    <!-- slide 12 -->
+    <section class="slide deck-after" id="slide-11" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Dealing with similar components</h2>
+        <p>
+          Option 3: Create a content-agnostic component
+          <br><br>
+          Our .company-info and .article-preview components have nothing in common from a "semantic" perspective. 
+          But they have a lot in common from a design perspective. We can create and reuse a new abstract component 
+          named after what they do have in common.
+        </p>
+        <div class="row">
+          <div class="half-width-container code-example">
+            <pre>&lt;div <span class="green-text">class</span>=<span class="red-text">"company-info""company-info"</span>&gt;
+  &lt;img <span class="green-text">class</span>=<span class="red-text">"company-info-image"</span> <span class="green-text">src</span>=<span class="red-text">"https://some.img"</span>&gt;
+  &lt;div <span class="green-text">class</span>=<span class="red-text">"company-info-content"</span>&gt;
+    &lt;h2 <span class="green-text">class</span>=<span class="red-text">"company-info-name"</span>&gt;Epam&lt;/h2&gt;
+    &lt;p <span class="green-text">class</span>=<span class="red-text">"company-info-body"</span>&gt;
+      We specialize in 11 industries
+      in 25 countries, delivering
+      innovative solutions
+      to our customers’
+      most challenging problems.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <div class="half-width-container code-example">
+            <pre>.company-info {
+  background-color: #999;
+  border: 1px solid #76cdd8;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px #ccc;
+}
+
+.company-info-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.company-info-content {
+  padding: 1rem;
+}
+
+.company-info-name {
+  font-size: 1.25rem;
+}
+
+.company-info-body {
+  color: rgba(0,0,0,0.75);
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slide 13 -->
+    <section class="slide deck-after" id="slide-12" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Content-agnostic CSS + utility classes</h2>
+        <p>
+          The content-agnostic CSS concept could be expanded to creation of a dosent of a small 
+          reusable classes each of which represent a small set of css rules
+        </p>
+        <pre class="code-example">.btn, .btn-primary, .btn-secondary
+.badge
+.card-list, .card-list-item
+.img-round, .img-round,
+.margin-top-10, .padding-left-large, .centered-text
+.hidden-on-tablet, .hidden-on-less-than-medium
+        </pre>
+        <p>
+          One html element could have a lot of css classes attached. This concept prefers composition 
+          to duplication. However it produces an html which looks like it uses just inline styles
+        </p>
+        <pre class="code-example">&lt;div <span class="green-text">class</span>=<span class="red-text">"flex text-lg text-dark"</span>&gt;
+  &lt;span <span class="green-text">class</span>=<span class="red-text">"py-2 px-4 border-r border-dark-soft"</span>&gt;hello&lt;/span&gt;
+  &lt;button <span class="green-text">class</span>=<span class="red-text">"f6 br3 ph3 pv2 white bg-purple hover-bg-light-purple"</span>&gt;Button Text&lt;/button&gt;
+&lt;/div&gt;
+        </pre>
+        <p>
+          As opposite to the 'separation of concerns' in this case The CSS isn't concerned with with 
+          the markup structure but HTML is very concerned about existing css classes.
+        </p>
+      </div>
+    </section>
+    <!-- slide 14 -->
+    <section class="slide deck-after" id="slide-13" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Why to use css organizing methodologies?</h2>
+        <p>
+          There is no "one true way" to write CSS but there are techniques that can keep CSS more 
+          organized and more structured, leading to code that is easier to build and easier to maintain.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/code-organizing.jpg" alt="">
+        <p>
+          No matter what methodology you choose to use in your projects, you will benefit from the 
+          advantages of more structured CSS and UI. Some styles are less strict and more flexible, 
+          while others are easier to understand and adapt in a team.
+        </p>
+        <br><br>
+        <a class="text-center" href="https://2019.stateofcss.com/technologies/methodologies/">2019.stateofcss.com</a>
+      </div>
+    </section>
+    <!-- slide 15 -->
+    <section class="slide deck-after" id="slide-14" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>BEM</h2>
+        <p>
+          BEM stands for “Block”, “Element”, “Modifier”. It is a front-end methodology: 
+          a new way of thinking when developing Web interfaces.
+        </p>
+        <h3>Block</h3>
+        <p>
+          A block is an independent entity, a “building block” of an application. A block
+           can be either simple or compound (containing other blocks).
+        </p>
+        <h3>Element</h3>
+        <p>
+          An element is a part of a block that performs a certain function. Elements are 
+          context-dependent: they only make sense in the context of the block that they belong to.
+        </p>
+        <h3>Modifier</h3>
+        <p>
+          An entity that defines the appearance, state, or behavior of a block or element.
+        </p>
+        <pre class="code-example">.site-header { ... } /* block */
+.site-header__logo { ... } /* element */
+.site-header__logo—xmas { ... } /* modifier */
+.site-header__navigation { ... } /* element */
+        </pre>
+        <div class="links text-center">
+          <a href="http://bem.info/">http://bem.info/</a>,
+          <a href="https://en.bem.info/methodology/quick-start/">https://en.bem.info/methodology/quick-start/</a>
+        </div>
+      </div>
+    </section>
+    <!-- slide 16 -->
+    <section class="slide deck-after" id="slide-15" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>BEM</h2>
+        <div class="row">
+          <div class="half-width-container">
+            <img src="./CSS methodologies and frameworks_files/BEM_blocks.png" alt="" style="height: 300px;">
+          </div>
+          <div class="half-width-container">
+            <img src="./CSS methodologies and frameworks_files/BEM_elements.png" alt="" style="height: 300px;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slide 17 -->
+    <section class="slide deck-after" id="slide-16" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>BEM + less</h2>
+        <div class="row">
+          <div class="half-width-container">
+            <pre class="code-example">
+&lt;div <span class="green-text">class</span>=<span class="red-text">"card"</span>&gt;
+  &lt;div <span class="green-text">class</span>=<span class="red-text">"card__image"</span>&gt;...&lt;/div&gt;
+  &lt;div <span class="green-text">class</span>=<span class="red-text">"card__description"</span>&gt;...&lt;/div&gt;
+  &lt;button <span class="green-text">class</span>=<span class="red-text">"card__button--success"</span>&gt;...&lt;/button&gt;
+  &lt;button <span class="green-text">class</span>=<span class="red-text">"card__button--back"</span>&gt;...&lt;/button&gt;
+&lt;/div&gt;
+            </pre>
+            <img class="default-img" src="./CSS methodologies and frameworks_files/BEM__img.png" alt="">
+          </div>
+          <div class="half-width-container">
+            <pre class="code-example">
+.card {
+  //styles for block card
+
+  &amp;__image {
+    //styles for element image
+  }
+
+  &amp;__description {
+    //styles for element description
+  }
+
+  &amp;__button {
+    //styles for element button
+
+    &amp;--success {
+      //styles for success button modifier
+      
+    }
+
+    &amp;--back {
+      //styles for back button modifier
+    }
+  }
+}
+            </pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- slide 18 -->
+    <section class="slide deck-after" id="slide-17" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Atomic CSS</h2>
+        <h3>Atomic CSS keeps things simple!</h3>
+        <p>
+          Atomic CSS offers a straightforward, obvious, and simple methodology. Classes are immutable - they don't change. 
+          This makes the application of CSS predictable and reliable as classes will always do exactly the same thing. 
+          The scope of adding or removing a utility class in an HTML file is unambiguous, giving you the confidence that 
+          you aren't breaking anything else. This can reduce cognitive load and mental-overhead.
+        </p>
+        <pre class="code-example">.relative {
+  position: relative;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+        </pre>
+      </div>
+    </section>
+    <!-- slide 19 -->
+    <section class="slide deck-after" id="slide-18" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Atomic design</h2>
+        <p>
+          A methodology composed of five distinct stages working together to create interface design systems: Atoms, 
+          Molecules, Organisms, Templates, Pages. Atomic elements combine together to form molecules which can combine 
+          further to form relatively complex organisms.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/atomic-design-process.png" alt="">
+        <a class="text-center" href="http://atomicdesign.bradfrost.com/">http://atomicdesign.bradfrost.com/</a>
+      </div>
+    </section>
+    <!-- slide 20 -->
+    <section class="slide deck-after" id="slide-19" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Style guides</h2>
+        <p>
+          When a company builds a design system, they have a goal they’re trying to achieve: improving 
+          brand consistency, preventing duplicate work across teams, or increasing code quality.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/styleguides.png" alt="">
+
+        <a class="text-center" href="http://styleguides.io/">http://styleguides.io</a>
+      </div>
+    </section>
+    <!-- slide 21 -->
+    <section class="slide deck-after" id="slide-20" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Material design style guide</h2>
+        <p>
+          Google needed a more consistent user experience for users of its applications (Gmail, Calendar, Docs, etc.) 
+          and for the third-party applications on platforms like Chrome Add-ons and Android Apps. Using of Material 
+          Design is the easiest way for a developer to setup a good-looking Android interface.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/material-design.png" alt="">
+
+        <a class="text-center" href="https://material.io/guidelines/">https://material.io/guidelines/</a>
+      </div>
+    </section>
+    <!-- slide 22 -->
+    <section class="slide deck-after" id="slide-21" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Grid system</h2>
+        <p>
+          CSS grid system is a 12-column, lightweight CSS grid to help you quickly build responsive websites.
+          <br>
+          Just download the CSS stylesheet and add the appropriate classes to your markup.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/grid.png" alt="bootstrap grid">
+        <div class="links text-center">
+          <a href="http://simplegrid.io/">http://simplegrid.io/</a>
+          <a href="https://960.gs/">https://960.gs/</a>
+        </div>
+      </div>
+    </section>
+    <!-- slide 23 -->
+    <section class="slide deck-after" id="slide-22" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Bootstrap</h2>
+        <p>
+          The most popular front-end framework for developing responsive, mobile first projects on the web.
+        </p>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/bootstrap_view.jpg" alt="">
+        <a class="text-center" href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+      </div>
+    </section>
+    <!-- slide 24 -->
+    <section class="slide deck-after" id="slide-23" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>CSS Grid</h2>
+        <p>
+            CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, 
+          meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system. 
+          You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) 
+          and to that element's children (which become Grid Items).
+        </p>
+        <br><br>
+        <p>
+            Determines a grid item's location within the grid by referring to specific grid lines. 
+          <strong>grid-column-start/grid-row-start</strong> 
+          is the line where the item begins, and
+          <strong>grid-column-end/grid-row-end</strong> is the line where the item ends.
+        </p>
+        <h3>fr unit</h3>
+        <p>
+          The fr unit allows you to set the size of a track as a fraction of the free space of the grid container. 
+          For example, this will set each item to one third the width of the grid container:
+        </p>
+        <pre class="code-example">.container {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+        </pre>
+        <div class="links text-center">
+          <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">css-tricks with grid</a>,
+          <a href="https://grid.layoutit.com/">grid visualizer</a>
+        </div>
+      </div>
+    </section>
+    <!-- slide 25 -->
+    <section class="slide">
+      <div class="slide-wrapper">
+        <h3>CSS Grid</h3>
+        <pre class="code-example">
+.container {
+  display: grid | inline-grid;
+  grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+}
+      </pre>
+      <img class="default-img" src="./CSS methodologies and frameworks_files/grid_naming.png" alt="grid naming">
+      </div>
+    </section>
+    <!-- slide 26-->
+    <section class="slide deck-after" id="slide-24" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h3>Grid item's location</h3>
+        <pre class="code-example">.item-a {
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+}
+        </pre>
+        <img class="default-img" src="./CSS methodologies and frameworks_files/grid-item-position.png" alt="grid item position">
+      </div>
+    </section>
+    <!-- slide 27 -->
+    <section class="slide deck-after" id="slide-26" aria-hidden="true">
+      <div class="slide-wrapper">
+        <h2>Useful links</h2>
+        <ul>
+          <li>
+            BEM
+            <a href="http://bem.info/">http://bem.info/</a>,
+            <a href="https://en.bem.info/methodology/quick-start/">https://en.bem.info/methodology/quick-start/</a>
+          </li>
+          <li>
+            Bootstrap grid
+            <a href="http://simplegrid.io/">http://simplegrid.io/</a>,
+            <a href="https://960.gs/">https://960.gs/</a>
+          </li>
+          <li>
+            CSS Grid
+            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">css-tricks with grid</a>,
+            <a href="https://grid.layoutit.com/">grid visualizer</a>
+          </li>
+          <li>
+            Statistics of usage
+            <a href="https://2019.stateofcss.com/technologies/">methodologies and frameworks</a>
+          </li>
+          <li>
+            Other CSS
+            <a href="https://habr.com/ru/post/256109/">methodologies</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- End slides. -->
+    
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation" style="height: 100%;">
+      <a href="file:///home/ob1wn/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F/deks/css_methodologies/CSS_methodologies_and_frameworks.html#" class="deck-prev-link deck-nav-disabled" title="Previous" aria-disabled="true">←</a>
+      <a href="file:///home/ob1wn/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F/deks/css_methodologies/CSS_methodologies_and_frameworks.html#slide-1" class="deck-next-link" title="Next" aria-disabled="false">→</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current">1</span>
+      /
+      <span class="deck-status-total">27</span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="file:///home/ob1wn/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F/deks/css_methodologies/" method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"><option value="slide-0"></option><option value="slide-1"></option><option value="slide-2"></option><option value="slide-3"></option><option value="slide-4"></option><option value="slide-5"></option><option value="slide-6"></option><option value="slide-7"></option><option value="slide-8"></option><option value="slide-9"></option><option value="slide-10"></option><option value="slide-11"></option><option value="slide-12"></option><option value="slide-13"></option><option value="slide-14"></option><option value="slide-15"></option><option value="slide-16"></option><option value="slide-17"></option><option value="slide-18"></option><option value="slide-19"></option><option value="slide-20"></option><option value="slide-21"></option><option value="slide-22"></option><option value="slide-23"></option><option value="slide-24"></option><option value="slide-25"></option><option value="slide-26"></option></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="./CSS methodologies and frameworks_files/jquery.min.js"></script>
+<script src="./CSS methodologies and frameworks_files/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="./CSS methodologies and frameworks_files/deck.menu.js"></script>
+<script src="./CSS methodologies and frameworks_files/deck.goto.js"></script>
+<script src="./CSS methodologies and frameworks_files/deck.status.js"></script>
+<script src="./CSS methodologies and frameworks_files/deck.navigation.js"></script>
+<!-- <script src="./CSS methodologies and frameworks_files/deck.scale.js"></script> -->
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+
+
+</body></html>
